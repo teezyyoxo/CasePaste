@@ -1,6 +1,6 @@
 <p align="center">
   <a href="#install-casepaste">
-    <img src="./assets/readme-hero.svg" alt="CasePaste for Salesforce — paste images, save them to Case Files, and place them inline" width="100%">
+    <img src="./assets/readme-hero.svg" alt="CasePaste for Salesforce – paste images, save them to Case Files, and place them inline" width="100%">
   </a>
 </p>
 
@@ -29,7 +29,7 @@ CasePaste turns the tiny Salesforce interruption that breaks your rhythm into th
 Salesforce’s _“Can’t publish a pasted image”_ banner never gets a chance to interrupt you.
 
 > [!TIP]
-> The big banner above is clickable. It jumps straight to installation—because apparently we’re a clickable-banner project now, and honestly that feels right.
+> The big banner above is clickable. It jumps straight to installation because apparently we’re a clickable-banner project now, and honestly that feels right. 😅
 
 ## At a glance
 
@@ -65,7 +65,7 @@ Salesforce’s _“Can’t publish a pasted image”_ banner never gets a chance
 
 There is no popup to open and no upload dialog to babysit. A small **Uploading image** marker holds your place for a moment, then becomes the uploaded image. Once both jobs are done, CasePaste shows a friendly confirmation toast.
 
-That toast is yours to shape. Change its words, accent color, corner, and time on screen—or turn successful notifications off entirely. Error notices always stay on so a failed upload never disappears quietly.
+That toast is yours to shape. Change its words, accent color, corner, and time on screen – or turn successful notifications off entirely. Error notices always stay on so a failed upload never disappears quietly.
 
 ### Highlights
 
@@ -82,10 +82,10 @@ That toast is yours to shape. Change its words, accent color, corner, and time o
 CasePaste runs in **Chrome 114 or newer**. Installation takes about a minute:
 
 1. Open the [latest CasePaste release](https://github.com/teezyyoxo/CasePaste/releases/latest).
-2. Under **Assets**, download `CasePaste-for-Salesforce-v0.1.0.zip`—not either of GitHub's automatically generated “Source code” archives.
+2. Under **Assets**, download `CasePaste-for-Salesforce-vX.X.X.zip`.
 3. Extract the downloaded ZIP somewhere you plan to keep it. Chrome needs the extracted folder, not the ZIP itself.
 4. Open `chrome://extensions` in Google Chrome.
-5. Turn on **Developer mode** in the upper-right corner.
+5. Turn on **Developer mode** in the upper-right corner, if it isn't already.
 6. Choose **Load unpacked**, then select the extracted folder containing `manifest.json`.
 7. Refresh any Salesforce tabs that were already open.
 
