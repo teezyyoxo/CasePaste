@@ -195,6 +195,17 @@ npm run check
 
 All notable work belongs in [`CHANGELOG.md`](CHANGELOG.md), starting with version **0.1.0**. Generated packages, signing keys, local browser profiles, secrets, caches, editor state, and test output are kept out of the public repository through [`.gitignore`](.gitignore).
 
+## Other Salesforce projects
+
+If CasePaste makes your Salesforce day a little easier, these projects might help too:
+
+| Project | What it does |
+| --- | --- |
+| [**SFSaver**](https://github.com/teezyyoxo/SFsaver) | Protects Salesforce Email, Post, Log a Call, and note drafts from refreshes and unexpected UI resets. |
+| [**salesforce-bulk-downloader**](https://github.com/teezyyoxo/salesforce-bulk-downloader) | Adds a Download All action for Salesforce Files, with flexible folder, filename, and duplicate handling. |
+| [**salesforce-post-character-counter**](https://github.com/teezyyoxo/salesforce-post-character-counter) | Adds a configurable, real-time character counter to Salesforce Post editors. |
+| [**salesforce-mega-composer**](https://github.com/teezyyoxo/salesforce-mega-composer) **Beta** | Makes Salesforce Post and Email composers resizable with presets and customizable controls. This one is still growing. |
+
 ---
 
 <p align="center">
