@@ -49,3 +49,6 @@ web-ext-artifacts/
 .test-profile/
 playwright-report/
 test-results/
+assets/
+scripts/
+tests/

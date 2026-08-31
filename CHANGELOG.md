@@ -6,7 +6,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 
 ## [0.1.0] - 2026-08-31
 
-### Added
+### INITIAL RELEASE
 
 - First Manifest V3 release under the name **CasePaste for Salesforce**.
 - Early paste interception for clipboard image files and inline data-URL images in Salesforce rich-text editors.
