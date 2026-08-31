@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="#install-it-locally">
+  <a href="#install-casepaste">
     <img src="./assets/readme-hero.svg" alt="CasePaste for Salesforce — paste images, save them to Case Files, and place them inline" width="100%">
   </a>
 </p>
@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <a href="#install-it-locally">Install</a> ·
+  <a href="#install-casepaste">Install</a> ·
   <a href="#use-it">Use it</a> ·
   <a href="#the-short-version-of-how-it-works">How it works</a> ·
   <a href="#settings-that-travel-with-chrome">Settings</a> ·
@@ -44,7 +44,7 @@ Salesforce’s _“Can’t publish a pasted image”_ banner never gets a chance
 <table>
   <tr>
     <td width="33%">
-      <a href="#install-it-locally">
+      <a href="#install-casepaste">
         <img src="./assets/readme-install.svg" alt="Install CasePaste in Chrome">
       </a>
     </td>
@@ -77,20 +77,32 @@ That toast is yours to shape. Change its words, accent color, corner, and time o
 - **Low-permission:** no blanket clipboard access, cookie-reading permission, or telemetry.
 - **Theme-conscious:** the settings page and toast honor light mode, dark mode, and reduced motion.
 
-## Install it locally
+## Install CasePaste
 
-CasePaste is ready to load as an unpacked extension in **Chrome 114 or newer**:
+CasePaste runs in **Chrome 114 or newer**. Installation takes about a minute:
 
-1. Download or clone this folder.
-2. Open `chrome://extensions` in Google Chrome.
-3. Turn on **Developer mode**.
-4. Choose **Load unpacked** and select this folder.
-5. Refresh any Salesforce tabs that were already open.
+1. Open the [latest CasePaste release](https://github.com/teezyyoxo/CasePaste/releases/latest).
+2. Under **Assets**, download `CasePaste-for-Salesforce-v0.1.0.zip`—not either of GitHub's automatically generated “Source code” archives.
+3. Extract the downloaded ZIP somewhere you plan to keep it. Chrome needs the extracted folder, not the ZIP itself.
+4. Open `chrome://extensions` in Google Chrome.
+5. Turn on **Developer mode** in the upper-right corner.
+6. Choose **Load unpacked**, then select the extracted folder containing `manifest.json`.
+7. Refresh any Salesforce tabs that were already open.
 
 Click the CasePaste toolbar icon whenever you want to open its settings.
 
 > [!IMPORTANT]
 > Loading or reloading an extension does not update Salesforce tabs that are already open. Refresh those tabs once so CasePaste can join the page.
+
+<details>
+  <summary><strong>Installing from the source repository instead?</strong></summary>
+
+  Clone or download the repository, then choose its top-level folder when Chrome asks you to **Load unpacked**. There is no build step; the checked-in source is ready for Chrome.
+</details>
+
+### Updating later
+
+Download and extract the newer release, replace the files in your existing CasePaste folder, click **Reload** on its `chrome://extensions` card, and refresh your open Salesforce tabs.
 
 ## Use it
 
