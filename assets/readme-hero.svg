@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="title description">
+  <title id="title">CasePaste for Salesforce</title>
+  <description id="description">Paste images into Case Feed posts, save them to Case Files, and keep moving. Click to jump to installation.</description>
+  <defs>
+    <linearGradient id="bg" x1="42" y1="18" x2="1158" y2="402" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#171426"/>
+      <stop offset=".53" stop-color="#25204A"/>
+      <stop offset="1" stop-color="#4436A3"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="83" y1="69" x2="462" y2="352" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A89CFF"/>
+      <stop offset="1" stop-color="#7362FF"/>
+    </linearGradient>
+    <linearGradient id="warm" x1="838" y1="237" x2="1098" y2="364" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFC58E"/>
+      <stop offset="1" stop-color="#FF9C5A"/>
+    </linearGradient>
+    <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.5" fill="#B8AEFF" opacity=".16"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="420" rx="34" fill="url(#bg)"/>
+  <rect width="1200" height="420" rx="34" fill="url(#dots)"/>
+  <circle cx="1057" cy="-42" r="230" fill="#8A76FF" opacity=".13"/>
+  <circle cx="69" cy="447" r="200" fill="#FF9D5A" opacity=".08"/>
+
+  <g transform="translate(70 56)">
+    <rect width="237" height="34" rx="17" fill="#FFFFFF" opacity=".1"/>
+    <circle cx="18" cy="17" r="5" fill="#6BE0A7"/>
+    <text x="32" y="22" fill="#E7E3FF" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="12" font-weight="700" letter-spacing="1.4">CHROME × SALESFORCE</text>
+
+    <text x="0" y="117" fill="#FFFFFF" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="72" font-weight="800" letter-spacing="-4">CasePaste</text>
+    <text x="2" y="157" fill="#C8C1F7" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="23" font-weight="600">Paste the image. Skip the interruption.</text>
+
+    <g transform="translate(0 202)">
+      <rect width="118" height="46" rx="13" fill="url(#accent)"/>
+      <path d="M24 15h17a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4H24a4 4 0 0 1-4-4V19a4 4 0 0 1 4-4Z" fill="none" stroke="#fff" stroke-width="2.3"/>
+      <circle cx="28" cy="22" r="2.2" fill="#fff"/>
+      <path d="m22 32 7-7 5 5 4-4 5 6" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3"/>
+      <text x="57" y="29" fill="#FFFFFF" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="13" font-weight="750">PASTE</text>
+
+      <path d="M142 23h45" stroke="#8D83C6" stroke-width="2" stroke-dasharray="4 5"/>
+      <path d="m180 18 7 5-7 5" fill="none" stroke="#8D83C6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+
+      <rect x="210" width="122" height="46" rx="13" fill="#FFFFFF" opacity=".1"/>
+      <path d="M229 18v15m-6-6 6 6 6-6M221 15h16" fill="none" stroke="#D7D1FF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <text x="247" y="29" fill="#E7E3FF" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="13" font-weight="750">FILES</text>
+
+      <path d="M356 23h45" stroke="#8D83C6" stroke-width="2" stroke-dasharray="4 5"/>
+      <path d="m394 18 7 5-7 5" fill="none" stroke="#8D83C6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+
+      <rect x="424" width="122" height="46" rx="13" fill="#FFFFFF" opacity=".1"/>
+      <path d="m443 25 5 5 10-11" fill="none" stroke="#6BE0A7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/>
+      <text x="468" y="29" fill="#E7E3FF" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="13" font-weight="750">INLINE</text>
+    </g>
+
+    <g transform="translate(0 280)">
+      <text x="0" y="18" fill="#ADA5DF" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="13" font-weight="650">CLICK THIS BANNER TO INSTALL</text>
+      <path d="M220 13h62m-8-7 8 7-8 7" fill="none" stroke="#FFB777" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+  </g>
+
+  <rect x="752" y="66" width="388" height="310" rx="24" fill="#090712" opacity=".24"/>
+  <g transform="translate(740 48)">
+    <rect width="388" height="310" rx="24" fill="#F8F8FB"/>
+    <rect width="388" height="48" rx="24" fill="#EEEFF5"/>
+    <path d="M0 24C0 10.745 10.745 0 24 0h340c13.255 0 24 10.745 24 24v24H0V24Z" fill="#EEEFF5"/>
+    <circle cx="24" cy="24" r="5" fill="#FF8B83"/>
+    <circle cx="42" cy="24" r="5" fill="#FFC96C"/>
+    <circle cx="60" cy="24" r="5" fill="#68D49E"/>
+    <rect x="88" y="15" width="222" height="18" rx="9" fill="#D7D8E2"/>
+    <text x="25" y="83" fill="#272A38" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="13" font-weight="750">POST</text>
+    <rect x="24" y="98" width="340" height="140" rx="12" fill="#FFFFFF" stroke="#D9DAE4" stroke-width="2"/>
+    <rect x="42" y="116" width="139" height="8" rx="4" fill="#E1E2E9"/>
+    <rect x="42" y="134" width="95" height="8" rx="4" fill="#E1E2E9"/>
+
+    <g transform="translate(184 154)">
+      <rect width="145" height="63" rx="10" fill="#ECE9FF"/>
+      <circle cx="31" cy="31" r="16" fill="#7B69FF"/>
+      <path d="M24 31h14m-7-7v14" stroke="#fff" stroke-linecap="round" stroke-width="2.4"/>
+      <text x="56" y="27" fill="#3E376C" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="11" font-weight="750">IMAGE READY</text>
+      <text x="56" y="44" fill="#77718F" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="9">Files + inline</text>
+    </g>
+
+    <g transform="translate(26 254)">
+      <rect width="336" height="37" rx="11" fill="#29263B"/>
+      <circle cx="20" cy="18.5" r="9" fill="url(#warm)"/>
+      <path d="m16 18.5 3 3 5-6" fill="none" stroke="#4A2E1E" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"/>
+      <text x="38" y="15" fill="#FFFFFF" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="9.5" font-weight="750">PASTE LANDED</text>
+      <text x="38" y="27" fill="#BDB8D2" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="7.7">Saved to Case Files and placed inline.</text>
+    </g>
+  </g>
+
+  <path d="m1044 195 39 14-17 8 12 23-12 6-12-23-16 11 6-39Z" fill="#FFAE69" stroke="#403588" stroke-linejoin="round" stroke-width="5"/>
+</svg>

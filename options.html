@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <title>CasePaste settings</title>
+    <link rel="icon" href="assets/icon-32.png">
+    <link rel="stylesheet" href="options.css">
+    <script defer src="src/core.js"></script>
+    <script defer src="options.js"></script>
+  </head>
+  <body>
+    <div class="ambient ambient--one" aria-hidden="true"></div>
+    <div class="ambient ambient--two" aria-hidden="true"></div>
+
+    <main class="shell">
+      <header class="hero">
+        <a class="brand" href="#top" aria-label="CasePaste settings home">
+          <img src="assets/icon-128.png" width="58" height="58" alt="">
+          <span>
+            <strong>CasePaste</strong>
+            <small>for Salesforce</small>
+          </span>
+        </a>
+
+        <div class="hero__copy" id="top">
+          <span class="eyebrow">Paste. Placed. Done.</span>
+          <h1>Make the small thing<br>feel effortless.</h1>
+          <p>
+            Your screenshots can land in Case Files and in the post at the same time.
+            Tune the handoff here, then get back to the work that matters.
+          </p>
+        </div>
+
+        <div class="route" aria-label="How CasePaste works">
+          <div class="route__step">
+            <span>1</span>
+            <strong>Copy</strong>
+            <small>any image</small>
+          </div>
+          <i aria-hidden="true"></i>
+          <div class="route__step">
+            <span>2</span>
+            <strong>Paste</strong>
+            <small>in a Case post</small>
+          </div>
+          <i aria-hidden="true"></i>
+          <div class="route__step route__step--accent">
+            <span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 12.5 3.2 3.2L17.5 8.5"></path></svg>
+            </span>
+            <strong>Carry on</strong>
+            <small>we do the rest</small>
+          </div>
+        </div>
+      </header>
+
+      <form id="settings-form" novalidate>
+        <section class="card card--behavior" aria-labelledby="behavior-title">
+          <div class="card__heading">
+            <div class="heading-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M8.5 3.5h7v4h3v13h-13v-13h3v-4Z"></path><path d="M8.5 7.5h7M9 12h6m-6 4h4"></path></svg>
+            </div>
+            <div>
+              <span class="section-kicker">The essentials</span>
+              <h2 id="behavior-title">Paste behavior</h2>
+            </div>
+          </div>
+
+          <label class="switch-row" for="enabled">
+            <span>
+              <strong>Catch pasted images</strong>
+              <small>Works in Salesforce rich-text boxes while you’re on a Case record.</small>
+            </span>
+            <span class="switch">
+              <input id="enabled" name="enabled" type="checkbox">
+              <span aria-hidden="true"></span>
+            </span>
+          </label>
+
+          <div class="field-grid">
+            <label class="field" for="filename-prefix">
+              <span>File name starts with</span>
+              <input id="filename-prefix" name="filenamePrefix" type="text" maxlength="48" autocomplete="off">
+              <small>Example: <output id="filename-example">CasePaste-2026-08-31T14-32-08Z.png</output></small>
+            </label>
+
+            <label class="field" for="max-file-size">
+              <span>Maximum image size</span>
+              <span class="number-field">
+                <input id="max-file-size" name="maxFileSizeMb" type="number" min="1" max="200" step="1" inputmode="numeric">
+                <b>MB</b>
+              </span>
+              <small>Larger pastes stay out of Salesforce and get a clear heads-up.</small>
+            </label>
+          </div>
+        </section>
+
+        <section class="card card--toast" aria-labelledby="toast-title">
+          <div class="card__heading card__heading--split">
+            <div class="heading-pair">
+              <div class="heading-icon heading-icon--warm" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z"></path><path d="m8 12.5 2.6 2.6L16.5 9"></path></svg>
+              </div>
+              <div>
+                <span class="section-kicker">The little victory lap</span>
+                <h2 id="toast-title">Success toast</h2>
+              </div>
+            </div>
+
+            <label class="compact-switch" for="show-success-toast">
+              <span>Show it</span>
+              <span class="switch switch--small">
+                <input id="show-success-toast" name="showSuccessToast" type="checkbox">
+                <span aria-hidden="true"></span>
+              </span>
+            </label>
+          </div>
+
+          <div class="toast-layout">
+            <div class="toast-controls" id="toast-controls">
+              <label class="field" for="toast-heading">
+                <span>Heading</span>
+                <input id="toast-heading" name="toastTitle" type="text" maxlength="60" autocomplete="off">
+              </label>
+
+              <label class="field" for="toast-message">
+                <span>Message</span>
+                <textarea id="toast-message" name="toastMessage" maxlength="180" rows="3"></textarea>
+                <small>Tokens: <code>{filename}</code>, <code>{caseId}</code>, <code>{count}</code></small>
+              </label>
+
+              <div class="field-grid field-grid--toast">
+                <label class="field" for="toast-position">
+                  <span>Corner</span>
+                  <span class="select-wrap">
+                    <select id="toast-position" name="toastPosition">
+                      <option value="top-right">Top right</option>
+                      <option value="top-left">Top left</option>
+                      <option value="bottom-right">Bottom right</option>
+                      <option value="bottom-left">Bottom left</option>
+                    </select>
+                  </span>
+                </label>
+
+                <label class="field" for="accent-color">
+                  <span>Accent</span>
+                  <span class="color-field">
+                    <input id="accent-color" name="accentColor" type="color">
+                    <output id="accent-value">#6d5dfc</output>
+                  </span>
+                </label>
+              </div>
+
+              <label class="field field--range" for="toast-duration">
+                <span>
+                  <span>Time on screen</span>
+                  <output id="duration-value">4.2 seconds</output>
+                </span>
+                <input id="toast-duration" name="toastDuration" type="range" min="1200" max="10000" step="100">
+              </label>
+            </div>
+
+            <aside class="preview-stage" aria-label="Toast preview">
+              <div class="preview-label">
+                <span></span>
+                Live preview
+              </div>
+              <div class="preview-window">
+                <div class="preview-window__bar"><i></i><i></i><i></i></div>
+                <div class="preview-window__page">
+                  <div class="preview-lines" aria-hidden="true"><i></i><i></i><i></i></div>
+                  <div class="toast-preview" id="toast-preview">
+                    <span class="toast-preview__mark" aria-hidden="true">
+                      <svg viewBox="0 0 24 24"><path d="m7 12.5 3.2 3.2L17.5 8.5"></path><path d="M12 2.8a9.2 9.2 0 1 1 0 18.4 9.2 9.2 0 0 1 0-18.4Z"></path></svg>
+                    </span>
+                    <span class="toast-preview__copy">
+                      <strong id="preview-title">Paste landed</strong>
+                      <small id="preview-message">CasePaste image made it to Case Files and landed right where you pasted.</small>
+                    </span>
+                    <span class="toast-preview__close" aria-hidden="true">×</span>
+                  </div>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <footer class="actions">
+          <p id="save-status" role="status" aria-live="polite">Changes stay on this device until you save.</p>
+          <div>
+            <button class="button button--quiet" id="reset-button" type="button">Reset defaults</button>
+            <button class="button button--primary" type="submit">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 12.5 3.2 3.2L17.5 8.5"></path></svg>
+              Save settings
+            </button>
+          </div>
+        </footer>
+      </form>
+
+      <p class="footnote">
+        CasePaste uses your existing Salesforce session. Images never visit a third-party service.
+        <span aria-hidden="true">·</span> Version 0.1.0
+      </p>
+    </main>
+  </body>
+</html>

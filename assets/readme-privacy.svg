@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="112" viewBox="0 0 400 112" role="img" aria-labelledby="title description">
+  <title id="title">Read CasePaste privacy details</title>
+  <description id="description">Jump to permissions and privacy information.</description>
+  <rect width="400" height="112" rx="18" fill="#177B61"/>
+  <circle cx="54" cy="56" r="29" fill="#FFFFFF" opacity=".13"/>
+  <path d="M54 35 69 41v11c0 12-6 21-15 26-9-5-15-14-15-26V41l15-6Z" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="3"/>
+  <path d="m47 55 5 5 10-11" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+  <text x="99" y="47" fill="#BCE9DB" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="12" font-weight="700" letter-spacing="1.2">YOUR DATA STAYS PUT</text>
+  <text x="99" y="74" fill="#FFFFFF" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="22" font-weight="800">See privacy details →</text>
+</svg>

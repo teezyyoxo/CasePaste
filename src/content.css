@@ -1,0 +1,49 @@
+.casepaste-upload-anchor {
+  align-items: center !important;
+  background: color-mix(in srgb, #6d5dfc 12%, Canvas) !important;
+  border: 1px solid color-mix(in srgb, #6d5dfc 44%, transparent) !important;
+  border-radius: 999px !important;
+  color: color-mix(in srgb, #6d5dfc 76%, CanvasText) !important;
+  display: inline-flex !important;
+  font: 600 12px/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+  gap: 6px !important;
+  margin: 2px 4px !important;
+  padding: 3px 9px !important;
+  vertical-align: middle !important;
+  white-space: nowrap !important;
+}
+
+/* Salesforce opens a Select Image modal before reaching its file input. While
+   CasePaste drives that native flow, keep the implementation detail invisible. */
+html[data-casepaste-native-active] .slds-modal,
+html[data-casepaste-native-active] .slds-backdrop,
+html[data-casepaste-native-active] .modal-container,
+html[data-casepaste-native-active] .modal-backdrop,
+html[data-casepaste-native-active] .uiModal,
+html[data-casepaste-native-active] [role="dialog"] {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  visibility: hidden !important;
+}
+
+.casepaste-upload-anchor::before {
+  animation: casepaste-spin 0.8s linear infinite !important;
+  border: 2px solid currentColor !important;
+  border-right-color: transparent !important;
+  border-radius: 50% !important;
+  content: "" !important;
+  height: 9px !important;
+  width: 9px !important;
+}
+
+@keyframes casepaste-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .casepaste-upload-anchor::before {
+    animation: none !important;
+  }
+}

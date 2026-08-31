@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="112" viewBox="0 0 400 112" role="img" aria-labelledby="title description">
+  <title id="title">Install CasePaste</title>
+  <description id="description">Jump to local Chrome installation instructions.</description>
+  <rect width="400" height="112" rx="18" fill="#6D5DFC"/>
+  <circle cx="54" cy="56" r="29" fill="#FFFFFF" opacity=".14"/>
+  <path d="M54 37v29m-11-11 11 11 11-11M41 75h26" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+  <text x="99" y="47" fill="#DCD7FF" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="12" font-weight="700" letter-spacing="1.2">START HERE</text>
+  <text x="99" y="74" fill="#FFFFFF" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="22" font-weight="800">Install in Chrome →</text>
+</svg>

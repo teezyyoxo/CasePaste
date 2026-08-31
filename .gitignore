@@ -1,0 +1,51 @@
+# Operating system clutter
+.DS_Store
+._*
+Thumbs.db
+Desktop.ini
+
+# Editors and local workspace state
+.idea/
+.vscode/
+*.code-workspace
+*.swp
+*.swo
+*~
+.codex/
+.agents/
+
+# Dependencies and package-manager noise
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Test output, caches, and temporary files
+coverage/
+.nyc_output/
+.cache/
+tmp/
+temp/
+*.tmp
+*.log
+
+# Local secrets and machine-specific configuration
+.env
+.env.*
+!.env.example
+
+# Chrome/WebExtension build and signing artifacts
+dist/
+build/
+web-ext-artifacts/
+*.crx
+*.pem
+*.xpi
+*.zip
+
+# Disposable browser profiles used for local extension testing
+.chrome-profile/
+.test-profile/
+playwright-report/
+test-results/
