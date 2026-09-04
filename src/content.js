@@ -2,7 +2,8 @@
   "use strict";
 
   const Core = globalThis.CasePasteCore;
-  if (!Core || globalThis.__casePasteLoaded) {
+  const Editor = globalThis.CasePasteEditor;
+  if (!Core || !Editor || globalThis.__casePasteLoaded) {
     return;
   }
 
@@ -236,7 +237,7 @@
           anchors[index],
           namedNativeFile
         );
-        removeUploadAnchor(editor, anchors[index]);
+        removeUploadAnchor(editor, anchors[index], nativeResult.image);
         successful.push({ filename, upload: nativeResult });
       } catch (error) {
         if (error && error.code === "NATIVE_UNAVAILABLE") {
@@ -340,13 +341,14 @@
       anchor.setAttribute("role", "status");
       anchor.setAttribute("aria-label", `Uploading pasted image ${index + 1} of ${count}`);
       const label = count === 1 ? "Uploading image" : `Uploading image ${index + 1}`;
-      anchor.textContent = label;
+      const placeholderText = Editor.makeUploadPlaceholder(label);
+      anchor.textContent = placeholderText;
       range.insertNode(anchor);
       const trackingRange = document.createRange();
       trackingRange.selectNode(anchor);
       range.setStartAfter(anchor);
       range.collapse(true);
-      anchors.push({ element: anchor, label, trackingRange });
+      anchors.push({ element: anchor, label, placeholderText, trackingRange });
     }
 
     const selection = window.getSelection();
@@ -477,6 +479,7 @@
       const contentVersionMatch = image.src.match(/\b068[a-zA-Z0-9]{12}(?:[a-zA-Z0-9]{3})?\b/);
       return {
         id: contentVersionMatch ? contentVersionMatch[0] : null,
+        image,
         native: true,
         success: true
       };
@@ -991,7 +994,7 @@
     }
   }
 
-  function removeUploadAnchor(editor, anchorHandle) {
+  function removeUploadAnchor(editor, anchorHandle, insertedImage) {
     const anchor = resolveAnchor(editor, anchorHandle);
     if (anchor) {
       anchor.remove();
@@ -999,9 +1002,16 @@
       return;
     }
 
-    if (isUsableTrackingRange(editor, anchorHandle) &&
-        anchorHandle.trackingRange.toString().trim() === anchorHandle.label) {
+    const rangeText = isUsableTrackingRange(editor, anchorHandle)
+      ? anchorHandle.trackingRange.toString().trim()
+      : "";
+    if (rangeText && (rangeText === anchorHandle.placeholderText || rangeText === anchorHandle.label)) {
       anchorHandle.trackingRange.deleteContents();
+      signalEditorChanged(editor, "deleteContentBackward");
+      return;
+    }
+
+    if (Editor.removeNormalizedUploadPlaceholder(editor, anchorHandle, insertedImage)) {
       signalEditorChanged(editor, "deleteContentBackward");
     }
   }

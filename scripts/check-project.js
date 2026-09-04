@@ -71,12 +71,14 @@ check(Array.isArray(packageJson.keywords) && packageJson.keywords.length >= 5, "
 
 const javascriptFiles = [
   "src/core.js",
+  "src/editor.js",
   "src/content.js",
   "src/page-bridge.js",
   "src/background.js",
   "options.js",
   "tests/background.test.js",
   "tests/core.test.js",
+  "tests/editor.test.js",
   "tests/page-bridge.test.js",
   "scripts/check-project.js"
 ];

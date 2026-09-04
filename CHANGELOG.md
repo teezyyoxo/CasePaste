@@ -4,6 +4,12 @@ All notable changes to CasePaste for Salesforce are recorded here.
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and releases use [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.1] - 2026-09-01
+
+### Fixed
+
+- Removed the **Uploading image** marker that "stuck" around after the pasted image was inserted inline.
+
 ## [0.1.0] - 2026-08-31
 
 ### INITIAL RELEASE
@@ -32,4 +38,5 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 - A comprehensive `.gitignore` covering local editor state, secrets, caches, test output, browser profiles, packaged extensions, and signing keys.
 - Automated unit and project-integrity checks.
 
+[0.1.1]: https://github.com/teezyyoxo/SFinlinecopypasta/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/teezyyoxo/SFinlinecopypasta/releases/tag/v0.1.0

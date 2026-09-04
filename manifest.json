@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "CasePaste for Salesforce",
   "short_name": "CasePaste",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Paste images straight into Salesforce Case posts while keeping a copy in Case Files.",
   "minimum_chrome_version": "114",
   "icons": {
@@ -55,6 +55,7 @@
       ],
       "js": [
         "src/core.js",
+        "src/editor.js",
         "src/content.js"
       ],
       "run_at": "document_start",
