@@ -264,6 +264,8 @@
           title: "Paste did not land",
           message: friendlyUploadError(error)
         });
+      } finally {
+        anchors[index].stopIndicator();
       }
     }
 
@@ -348,7 +350,9 @@
       trackingRange.selectNode(anchor);
       range.setStartAfter(anchor);
       range.collapse(true);
-      anchors.push({ element: anchor, label, placeholderText, trackingRange });
+      const handle = { element: anchor, label, placeholderText, trackingRange };
+      handle.stopIndicator = Editor.showUploadIndicator(editor, handle, settings);
+      anchors.push(handle);
     }
 
     const selection = window.getSelection();
@@ -446,6 +450,7 @@
     const existingImages = new Set(editor.querySelectorAll("img"));
     const restoreSelection = moveSelectionToAnchor(editor, anchorHandle);
     let nativeDialog = null;
+    const restoreSurfaces = Editor.hideNativeUploadSurfaces(document, editor);
 
     try {
       document.documentElement.setAttribute(NATIVE_ACTIVE_ATTRIBUTE, token);
@@ -504,6 +509,7 @@
         await waitForElementRemoval(nativeDialog, 1000);
       }
       document.documentElement.removeAttribute(NATIVE_ACTIVE_ATTRIBUTE);
+      restoreSurfaces();
       restoreSelection();
     }
   }

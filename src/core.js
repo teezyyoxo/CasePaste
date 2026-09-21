@@ -33,6 +33,10 @@
     toastDuration: 4200,
     toastPosition: "top-right",
     accentColor: "#6d5dfc",
+    spinnerColor: "#5946cc",
+    spinnerBackground: "#ede9ff",
+    spinnerStyle: "ring",
+    spinnerSpeed: "normal",
     filenamePrefix: "CasePaste",
     maxFileSizeMb: 25
   });
@@ -48,6 +52,10 @@
 
     const cleaned = value.replace(/[\u0000-\u001f\u007f]/g, " ").trim();
     return cleaned ? cleaned.slice(0, maximumLength) : fallback;
+  }
+
+  function sanitizeColor(value, fallback) {
+    return typeof value === "string" && /^#[0-9a-f]{6}$/i.test(value) ? value.toLowerCase() : fallback;
   }
 
   function sanitizeSettings(candidate) {
@@ -71,6 +79,10 @@
         : DEFAULTS.toastDuration,
       toastPosition: position,
       accentColor: accent,
+      spinnerColor: sanitizeColor(input.spinnerColor, DEFAULTS.spinnerColor),
+      spinnerBackground: sanitizeColor(input.spinnerBackground, DEFAULTS.spinnerBackground),
+      spinnerStyle: ["ring", "dotted"].includes(input.spinnerStyle) ? input.spinnerStyle : DEFAULTS.spinnerStyle,
+      spinnerSpeed: ["slow", "normal", "fast"].includes(input.spinnerSpeed) ? input.spinnerSpeed : DEFAULTS.spinnerSpeed,
       filenamePrefix: cleanText(input.filenamePrefix, DEFAULTS.filenamePrefix, 48)
         .replace(/[\\/:*?"<>|]+/g, "-")
         .replace(/\s+/g, " "),

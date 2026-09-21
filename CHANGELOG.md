@@ -4,6 +4,18 @@ All notable changes to CasePaste for Salesforce are recorded here.
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and releases use [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.2.1] - 2026-09-21
+
+### Added
+
+- Upload spinner settings for foreground color, background color, circular or dotted style, and animation speed, with a live preview and Chrome sync.
+
+### Fixed
+
+- Keep the Edit Post modal and its backdrop visible while pasted images upload; hide only newly opened native upload surfaces.
+- Show the purple inline uploading badge and circular spinner for every pending image, even when Salesforce normalizes the editor markup.
+- Remove upload indicators on success, failure, or editor removal.
+
 ## [0.1.1] - 2026-09-01
 
 ### Fixed
@@ -38,5 +50,6 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 - A comprehensive `.gitignore` covering local editor state, secrets, caches, test output, browser profiles, packaged extensions, and signing keys.
 - Automated unit and project-integrity checks.
 
+[0.2.1]: https://github.com/teezyyoxo/SFinlinecopypasta/compare/v0.1.1...v0.2.1
 [0.1.1]: https://github.com/teezyyoxo/SFinlinecopypasta/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/teezyyoxo/SFinlinecopypasta/releases/tag/v0.1.0

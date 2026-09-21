@@ -1,6 +1,6 @@
 {
   "name": "casepaste-for-salesforce",
-  "version": "0.1.1",
+  "version": "0.2.1",
   "private": true,
   "description": "Paste images directly into Salesforce Case Feed posts—automatically uploaded to Case Files and placed inline at your cursor.",
   "keywords": [

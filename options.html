@@ -8,6 +8,7 @@
     <link rel="icon" href="assets/icon-32.png">
     <link rel="stylesheet" href="options.css">
     <script defer src="src/core.js"></script>
+    <script defer src="src/editor.js"></script>
     <script defer src="options.js"></script>
   </head>
   <body>
@@ -94,6 +95,44 @@
               </span>
               <small>Larger pastes stay out of Salesforce and get a clear heads-up.</small>
             </label>
+          </div>
+        </section>
+
+        <section class="card" aria-labelledby="spinner-title">
+          <div class="card__heading">
+            <div>
+              <span class="section-kicker">While your image uploads</span>
+              <h2 id="spinner-title">Upload spinner</h2>
+            </div>
+          </div>
+          <div class="toast-layout">
+            <div class="toast-controls">
+              <div class="field-grid">
+                <label class="field" for="spinner-color">
+                  <span>Spinner and text color</span>
+                  <span class="color-field"><input id="spinner-color" name="spinnerColor" type="color"><output id="spinner-color-value"></output></span>
+                </label>
+                <label class="field" for="spinner-background">
+                  <span>Badge background</span>
+                  <span class="color-field"><input id="spinner-background" name="spinnerBackground" type="color"><output id="spinner-background-value"></output></span>
+                </label>
+              </div>
+              <div class="field-grid">
+                <label class="field" for="spinner-style">
+                  <span>Spinner style</span>
+                  <span class="select-wrap"><select id="spinner-style" name="spinnerStyle"><option value="ring">Circular ring</option><option value="dotted">Dotted circle</option></select></span>
+                </label>
+                <label class="field" for="spinner-speed">
+                  <span>Animation speed</span>
+                  <span class="select-wrap"><select id="spinner-speed" name="spinnerSpeed"><option value="slow">Slow</option><option value="normal">Normal</option><option value="fast">Fast</option></select></span>
+                </label>
+              </div>
+              <p class="spinner-help">Your device’s reduced-motion setting pauses the animation.</p>
+            </div>
+            <aside class="preview-stage" aria-label="Upload spinner preview">
+              <div class="preview-label"><span></span>Live preview</div>
+              <div class="spinner-preview-line">Screenshot: <span id="spinner-preview"></span></div>
+            </aside>
           </div>
         </section>
 
@@ -201,7 +240,7 @@
 
       <p class="footnote">
         CasePaste uses your existing Salesforce session. Images never visit a third-party service.
-        <span aria-hidden="true">·</span> Version 0.1.0
+        <span aria-hidden="true">·</span> Version <span id="extension-version">0.2.1</span>
       </p>
     </main>
   </body>

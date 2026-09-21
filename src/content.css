@@ -13,14 +13,9 @@
   white-space: nowrap !important;
 }
 
-/* Salesforce opens a Select Image modal before reaching its file input. While
-   CasePaste drives that native flow, keep the implementation detail invisible. */
-html[data-casepaste-native-active] .slds-modal,
-html[data-casepaste-native-active] .slds-backdrop,
-html[data-casepaste-native-active] .modal-container,
-html[data-casepaste-native-active] .modal-backdrop,
-html[data-casepaste-native-active] .uiModal,
-html[data-casepaste-native-active] [role="dialog"] {
+/* Only surfaces opened by the native uploader are hidden. Existing edit
+   dialogs and their backdrops remain visible throughout the upload. */
+[data-casepaste-upload-surface] {
   opacity: 0 !important;
   pointer-events: none !important;
   visibility: hidden !important;

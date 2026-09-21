@@ -924,3 +924,6 @@ input[type="range"] {
     transition-duration: 0.01ms !important;
   }
 }
+
+.spinner-preview-line { padding: 32px 0; color: var(--muted); line-height: 2; }
+.spinner-help { color: var(--muted); font-size: 13px; margin: 0; }

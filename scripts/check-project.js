@@ -79,6 +79,7 @@ const javascriptFiles = [
   "tests/background.test.js",
   "tests/core.test.js",
   "tests/editor.test.js",
+  "tests/options.test.js",
   "tests/page-bridge.test.js",
   "scripts/check-project.js"
 ];

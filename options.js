@@ -12,6 +12,8 @@
   const filenameExample = document.querySelector("#filename-example");
   let savedSnapshot = "";
 
+  document.querySelector("#extension-version").textContent = chrome.runtime.getManifest().version;
+
   void load();
 
   form.addEventListener("input", () => {
@@ -43,6 +45,10 @@
       toastDuration: form.elements.toastDuration.value,
       toastPosition: form.elements.toastPosition.value,
       accentColor: form.elements.accentColor.value,
+      spinnerColor: form.elements.spinnerColor.value,
+      spinnerBackground: form.elements.spinnerBackground.value,
+      spinnerStyle: form.elements.spinnerStyle.value,
+      spinnerSpeed: form.elements.spinnerSpeed.value,
       filenamePrefix: form.elements.filenamePrefix.value,
       maxFileSizeMb: form.elements.maxFileSizeMb.value
     });
@@ -56,6 +62,9 @@
     form.elements.toastDuration.value = options.toastDuration;
     form.elements.toastPosition.value = options.toastPosition;
     form.elements.accentColor.value = options.accentColor;
+    for (const key of ["spinnerColor", "spinnerBackground", "spinnerStyle", "spinnerSpeed"]) {
+      form.elements[key].value = options[key];
+    }
     form.elements.filenamePrefix.value = options.filenamePrefix;
     form.elements.maxFileSizeMb.value = options.maxFileSizeMb;
   }
@@ -77,6 +86,10 @@
     toastControls.setAttribute("aria-disabled", String(!options.showSuccessToast));
     durationValue.textContent = `${seconds} ${seconds === "1" ? "second" : "seconds"}`;
     accentValue.textContent = options.accentColor;
+    document.querySelector("#spinner-color-value").textContent = options.spinnerColor;
+    document.querySelector("#spinner-background-value").textContent = options.spinnerBackground;
+    const { host } = globalThis.CasePasteEditor.createUploadBadge(document, "Uploading image", options);
+    document.querySelector("#spinner-preview").replaceChildren(host);
     filenameExample.textContent = Core.makeFilename(
       options.filenamePrefix,
       "image/png",

@@ -150,6 +150,7 @@ The options page stores preferences with Chrome sync when sync is available:
 | --- | --- |
 | **Catch pasted images** | Enables or pauses CasePaste without uninstalling it |
 | **File name starts with** | Replaces the default `CasePaste` prefix |
+| **Upload spinner** | Customize spinner/text color, badge background, ring or dotted style, and animation speed with a live preview; honors reduced motion |
 | **Maximum image size** | Accepts 1–200 MB; defaults to 25 MB |
 | **Show success toast** | Keeps confirmations visible or works silently |
 | **Heading and message** | Supports `{filename}`, `{caseId}`, and `{count}` tokens |
